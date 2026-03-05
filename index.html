@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gestion Collège</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>ENT Collège Fictif</h1>
+
+<div id="login">
+<h2>Connexion</h2>
+
+<input id="username" placeholder="Identifiant">
+<input id="password" type="password" placeholder="Mot de passe">
+
+<button onclick="login()">Se connecter</button>
+</div>
+
+<div id="dashboard" style="display:none">
+
+<h2 id="welcome"></h2>
+
+<div id="adminPanel" class="panel">
+<h3>Administration</h3>
+
+<h4>Créer utilisateur</h4>
+
+<input id="newUser" placeholder="Identifiant">
+<input id="newPass" placeholder="Mot de passe">
+
+<select id="role">
+<option value="prof">Professeur</option>
+<option value="eleve">Élève</option>
+<option value="admin">Administrateur</option>
+</select>
+
+<button onclick="createUser()">Créer</button>
+
+<h4>Liste utilisateurs</h4>
+<ul id="userList"></ul>
+
+</div>
+
+<div id="profPanel" class="panel">
+
+<h3>Ajouter note</h3>
+
+<input id="student" placeholder="Nom élève">
+<input id="subject" placeholder="Matière">
+<input id="grade" placeholder="Note">
+
+<button onclick="addGrade()">Ajouter</button>
+
+</div>
+
+<div id="elevePanel" class="panel">
+
+<h3>Mes notes</h3>
+
+<ul id="grades"></ul>
+
+</div>
+
+<button onclick="logout()">Déconnexion</button>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
